@@ -33,6 +33,11 @@ class TimestampController extends Controller {
     if (this.timestampError) next(this.timestampError)
     res.json(this.timestamp)
   }
+  help(req, res, next) {
+    res.send(`Provide timestamp to URL:
+      Works with human readable dates, like "December 15, 2015"
+      and  and unix timestamps, like "1450137600"`)
+  }
 }
 
 module.exports = new TimestampController(timestampModel);
