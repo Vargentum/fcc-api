@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "iron-node index.js",
-    "start": "node index.js"
+    "start": "MONGO_DB_URI= mongodb://test:foobar@ds059306.mlab.com:59306/fcc-api node index.js"
   },
   "engines": {
     "node": ">=6"
