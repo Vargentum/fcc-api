@@ -8,4 +8,4 @@ const headerSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('Timestamp', headerSchema);
+module.exports = mongoose.model('Header', headerSchema);

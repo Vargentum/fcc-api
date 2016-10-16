@@ -10,7 +10,7 @@ router.route('/').get((req, res) => {
 });
 
 router.use('/timestamp', timestamp);
-router.use('/header', header);
+router.use('/whoami', header);
 
 
 module.exports = router;

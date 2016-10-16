@@ -4,6 +4,7 @@ const helmet     = require('helmet');
 const bodyParser = require('body-parser');
 const morgan     = require('morgan');
 const bluebird   = require('bluebird');
+const useragent  = require('express-useragent')
 
 const config = require('./config');
 const routes = require('./routes');
@@ -17,6 +18,7 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
+app.use(useragent.express());
 app.use('/', routes);
 
 app.listen(config.server.port, () => {

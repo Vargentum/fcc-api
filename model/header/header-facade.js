@@ -1,5 +1,5 @@
 const Model = require('../../lib/facade');
-const headerSchema  = require('./timestamp-schema');
+const headerSchema  = require('./header-schema');
 
 
 class HeaderModel extends Model {}
